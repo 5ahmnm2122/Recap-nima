@@ -7,8 +7,8 @@ public class GameManager : MonoBehaviour
 {
 
     public GameObject target;
-    public float waitingForSpawn = 5;
-    public float countdown = 5;
+    public float waitingForSpawn = 2;
+    public float countdown = 2;
 
     public AudioSource shootSound;
 

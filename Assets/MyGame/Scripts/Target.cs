@@ -20,14 +20,14 @@ public class Target : MonoBehaviour
     private void OnMouseDown()
     {
         SpawnTargets();
-        Destroy(gameObject);
+        Destroy(this.gameObject);
         newScore = score + 1;
         score = newScore;
         scoreText.GetComponent<Text>().text = "" + score;
         Debug.Log("target got hit");
 
-       //hitSound.GetComponent<AudioSource>();
-        //hitSound.Play(1);
+       hitSound.GetComponent<AudioSource>();
+        hitSound.Play(1);
 
         if (newScore >= 10)
         {
