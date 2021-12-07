@@ -528,6 +528,7 @@ MonoBehaviour:
   waitingForSpawn: 2
   countdown: 2
   shootSound: {fileID: 932979195}
+  parent: {fileID: 214125450}
 --- !u!4 &925310767
 Transform:
   m_ObjectHideFlags: 0
@@ -1205,6 +1206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TargetGroup
       objectReference: {fileID: 0}
+    - target: {fileID: 2764502733481979979, guid: 06b1af8591cd7de41888224bffa7dcd8, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 214125450}
     - target: {fileID: 2764502733481979979, guid: 06b1af8591cd7de41888224bffa7dcd8, type: 3}
       propertyPath: hitSound
       value: 

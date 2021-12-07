@@ -17,10 +17,12 @@ public class Target : MonoBehaviour
     public AudioSource hitSound;
     public AudioSource winSound;
 
+    public GameObject parent;
+
     private void OnMouseDown()
     {
         SpawnTargets();
-        Destroy(this.gameObject);
+        Destroy(gameObject);
         newScore = score + 1;
         score = newScore;
         scoreText.GetComponent<Text>().text = "" + score;
@@ -44,9 +46,11 @@ public class Target : MonoBehaviour
     void SpawnTargets()
     {
         Debug.Log("Spawn");
-        Vector2 position = new Vector2(Random.Range(-2f, 2f), Random.Range(-2f, 2f));
+        Vector2 position = new Vector2(Random.Range(-5f, 5f), Random.Range(-5f, 5f));
 
-        Instantiate(target, position, Quaternion.identity);
+        Instantiate(target, parent.transform);
+
+        
 
     }
 }

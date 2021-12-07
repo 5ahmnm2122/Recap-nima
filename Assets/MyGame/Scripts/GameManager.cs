@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour
 
     public AudioSource shootSound;
 
+    public GameObject parent;
+
+
+
     void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.name == "Target")
@@ -45,7 +49,7 @@ public class GameManager : MonoBehaviour
  
     Vector2 position = new Vector2(Random.Range(-2f, 2f), Random.Range(-2f, 2f));
 
-    Instantiate(target, position, Quaternion.identity);
+    Instantiate (target, parent.transform);
 
     }
 
